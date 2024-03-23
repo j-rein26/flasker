@@ -1,14 +1,10 @@
-<h1>Hello {{ user_name }}</h1>
-
-<p>This is the user page</p>
-
-<div>
-	<ol>
-		
-		{{ favorite_pizza }}
-
-	</ol>
+{% extends 'base.html' %}
+{% block content%}
 
 
 
-</div>
+	<h1>Hello {{ user_name }}</h1>
+
+
+{% endblock %}
+

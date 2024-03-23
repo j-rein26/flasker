@@ -1,15 +1,30 @@
-<h1>Hello World</h1>
 
-<p>My name is {{ first_name }} This is going to be a blog website</p>
+{% extends 'base.html' %}
+{% block content %}
 
-<p>This is the user page</p>
 
-<h3> Favorite Pizza</h3>
 
-{% for topping in favorite_pizza %}
+	<h1>Hello World</h1>
+	<br/>
+	<div class="container">
+		
+		<img src="{{ url_for('static', filename='images/coffee-hero.jpg')}}" class="img-fluid">
 
-	
-		{{ topping }} <br/>
-	
-	
-{% endfor %}
+	</div>
+
+
+	<p>My name is {{ first_name }} This is going to be a blog website</p>
+
+	<p>This is the user page</p>
+
+	<h3> Favorite Pizza</h3>
+
+	{% for topping in favorite_pizza %}
+
+		
+			{{ topping }} <br/>
+		
+		
+	{% endfor %}
+
+{% endblock %}
